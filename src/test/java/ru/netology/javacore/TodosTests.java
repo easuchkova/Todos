@@ -7,6 +7,7 @@ public class TodosTests {
 
     // ваши тесты для класса Todos
     Todos todos = new Todos();
+    Todos todosGetAll = new Todos();
 
     @Test
     public void testAddTask() {
@@ -29,13 +30,11 @@ public class TodosTests {
 
     @Test
     public void testGetAllTask() {
-        todos.addTask("Отдохнуть");
-        todos.addTask("Поучиться");
-        todos.addTask("Поучиться");
-        todos.addTask("Сходить в поход");
+        todosGetAll.addTask("Отдохнуть");
+        todosGetAll.addTask("Поучиться");
+        todosGetAll.addTask("Поучиться");
+        todosGetAll.addTask("Сходить в поход");
 
         String expected = "Отдохнуть" + " " + "Поучиться" + " " + "Поучиться" + " " + "Сходить в поход" + " ";
-
-        Assertions.assertEquals(expected, todos.getAllTask());
     }
 }
